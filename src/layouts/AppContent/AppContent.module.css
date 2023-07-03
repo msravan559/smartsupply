@@ -1,0 +1,9 @@
+.appContentWrapper {
+  position: fixed;
+  overflow: hidden;
+}
+
+.appContent {
+  height: 100%;
+  background: rgb(214, 220, 220);
+}/*# sourceMappingURL=AppContent.module.css.map */

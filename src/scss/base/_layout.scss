@@ -1,0 +1,19 @@
+.app {
+  &-wrapper {
+    position: $rel;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-body {
+    position: $rel;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-main {
+    position: $rel;
+    height: 100vh;
+  }
+}

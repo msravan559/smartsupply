@@ -1,0 +1,53 @@
+@import '../../scss/variables';
+
+$sidebar-prefix: ant;
+$link-color: rgba(255, 253, 253, 0.5);
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  background-color: $c-white;
+  // border-right: 1px solid #ebebeb;
+  // border-right: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // height: $header-height;
+  padding: 0 10px;
+  background-color: $c-white;
+  // border-bottom: 1px solid #ebebeb;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.container {
+  flex: 1;
+  height: 100vh;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .ant-menu-inline {
+    border-right: none;
+  }
+}

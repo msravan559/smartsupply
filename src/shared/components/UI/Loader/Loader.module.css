@@ -1,0 +1,15 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(253, 253, 253);
+  z-index: 2;
+}
+.loader:global.shown {
+  opacity: 1;
+  transition: all 0;
+}
+.loader:global.hidden {
+  opacity: 0;
+  transition: all 0.5s;
+}/*# sourceMappingURL=Loader.module.css.map */

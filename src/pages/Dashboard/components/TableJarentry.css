@@ -1,0 +1,56 @@
+.tableheading {
+  color: aqua;
+  font-size: larger;
+}
+.passin {
+  width: 80px;
+  padding: 5px;
+  text-align: right;
+  background-color: #357f8c;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  background: url(/src/assets/images/jar-in.png) no-repeat scroll 7px 0px;
+  background-size: 30px;
+  height: 33px;
+  margin-bottom: 3px;
+}
+.passout {
+  width: 80px;
+  padding: 5px;
+  text-align: right;
+  background-color: #357f8c;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  background: url(/src/assets/images/jar-out.png) no-repeat scroll 7px 0px;
+  background-size: 30px;
+  height: 33px;
+}
+.bold-line {
+  border-top: 2px solid black;
+  margin: 10px 0;
+}
+
+.ant-modal-content {
+  min-height: 150px;
+}
+.ant-modal-header {
+  margin-left: 210px;
+}
+.click {
+  /* background-color: #2f80ed; */
+  color: rgb(0, 0, 0);
+  transition: background-color 0.5s ease-out;
+}
+
+.click:hover,
+.click:focus {
+  background-color: #2d6ec4;
+  color: rgb(0, 0, 0);
+  transition: none;
+}
+
+.click:active {
+  background-color: #2d6ec4;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.2s;
+}

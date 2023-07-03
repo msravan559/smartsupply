@@ -1,0 +1,20 @@
+$ant: ant;
+
+.#{$ant} {
+  &-form {
+    &-item {
+      &-explain-error {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &-input {
+    &-focused,
+    &:focus,
+    &-affix-wrapper-focused,
+    &-affix-wrapper:focus {
+      box-shadow: none !important;
+    }
+  }
+}

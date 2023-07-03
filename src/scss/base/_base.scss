@@ -1,0 +1,14 @@
+*,
+*:before,
+*:after {
+  @include border-box();
+  backface-visibility: hidden;
+  font-size: 14px;
+}
+
+body {
+  width: 100%;
+  background-color: $c-body-bg !important;
+  backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+}

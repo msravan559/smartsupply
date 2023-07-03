@@ -1,0 +1,146 @@
+$ant: ant;
+$menu: #{$ant}-menu;
+$item: #{$menu}-item;
+$submenu: #{$menu}-submenu;
+
+$link-color: #000000;
+
+.#{$ant} {
+  &-menu {
+    height: 100%;
+    align-items: center;
+    font-weight: 600;
+    background-color: transparent !important;
+    color: $link-color !important;
+
+    &-horizontal {
+      border-right: 0 !important;
+    }
+
+    &-inline &-item::after {
+      display: none;
+    }
+
+    &-sub.ant-menu-inline {
+      background-color: transparent !important;
+    }
+
+    &-item {
+      display: flex !important;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 10px !important;
+      padding-inline: 8px !important;
+
+      a {
+        display: flex;
+        // color: $link-color !important;
+
+        &:hover {
+          color: $link-color;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-icon {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+    }
+
+    .anticon svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    &-submenu {
+      &-arrow {
+        &::after,
+        &::before {
+          color: $link-color;
+        }
+      }
+
+      &-active,
+      &-open {
+        .#{$submenu} {
+          &-arrow {
+            &::after,
+            &::before {
+              color: $c-white;
+            }
+          }
+        }
+      }
+    }
+
+    // :where(
+    //     .css-dev-only-do-not-override-1m7ahzu
+    //   ).ant-menu-light.ant-menu-horizontal
+    //   > .ant-menu-item-selected,
+    // :where(
+    //     .css-dev-only-do-not-override-1m7ahzu
+    //   ).ant-menu-light.ant-menu-horizontal
+    //   > .ant-menu-submenu-selected {
+    // }
+
+    &-light {
+      &.ant-menu-horizontal {
+        > .ant-menu-item-selected {
+          color: white;
+          background-color: #175491;
+        }
+      }
+    }
+
+    .ant-menu-item-active,
+    .ant-menu-submenu-active .ant-menu-submenu-title,
+    .ant-menu-submenu-open .ant-menu-submenu-title,
+    &:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background-color: #175491 !important;
+
+      // svg {
+      //   path,
+      //   rect {
+      //     fill: white;
+      //   }
+      // }
+
+      .ant-menu-title-content span {
+        color: white !important;
+      }
+    }
+
+    &:not(.ant-menu-horizontal) {
+      .#{$submenu} {
+        .#{$item} {
+          &-selected,
+          &-active {
+            background-color: $c-white !important;
+
+            span {
+              color: $c-brand !important;
+            }
+
+            svg {
+              path,
+              rect {
+                fill: $c-brand !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+/************************* Colors *************************/
+/******************** Typography *************************/
+/********************* Positions *************************/
+/********************* Display *************************/
+/********************* Others **************************/
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  background-color: #ffffff;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brandLogo img {
+  max-width: 150px;
+}/*# sourceMappingURL=NavBarBrand.module.css.map */

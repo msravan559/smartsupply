@@ -1,0 +1,30 @@
+//------ SASS Useful Mixins ---------------------------------------------
+
+// by Ryan Burgess
+// https://github.com/ryanburgess/SASS-Useful-Mixins
+// MIT © Ryan Burgess
+
+// ----------------------------------------------------------------------
+
+  // Box Model
+
+// ----------------------------------------------------------------------
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+     -moz-box-sizing: $box-model;
+      box-sizing: $box-model;
+}
+
+@mixin border-box() {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+@mixin content-box() {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+      box-sizing: content-box;
+}
+

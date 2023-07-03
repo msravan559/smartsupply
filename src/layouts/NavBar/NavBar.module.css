@@ -1,0 +1,43 @@
+/************************* Colors *************************/
+/******************** Typography *************************/
+/********************* Positions *************************/
+/********************* Display *************************/
+/********************* Others **************************/
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  background-color: #ffffff;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brandLogo img {
+  max-width: 100%;
+}
+
+.container {
+  flex: 1;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.container:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.container .ant-menu-inline {
+  border-right: none;
+}/*# sourceMappingURL=NavBar.module.css.map */

@@ -1,0 +1,44 @@
+/*!*
+Theme Name: Public Announcement System
+Theme URI: https://www.iramtech.com/
+Author: iRam Technologies
+Author URI: https://www.iramtech.com/
+Description: Antd Custom Theme.
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: PASApp_base
+Tags: react, antd, scss, charts. 
+*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import 'variables';
+
+@import 'base/utils';
+@import 'mixins/mixins';
+@import 'base/reset';
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/plugins';
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import 'components/sideBar';
+@import 'components/forms';
+@import 'components/table';
+@import 'components/tabs';
+@import 'components/card';
+@import 'components/modal';
+@import 'components/leaflet';
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import 'base/layout';
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/

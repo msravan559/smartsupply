@@ -1,0 +1,7 @@
+.profileAvatar {
+  margin-right: 20px;
+}
+.profileAvatar :global .userName {
+  padding-left: 5px;
+  color: rgb(0, 0, 0);
+}/*# sourceMappingURL=Profile.module.css.map */

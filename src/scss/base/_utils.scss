@@ -1,0 +1,178 @@
+$utilities: () !default;
+
+$utilities: map-merge(
+  (
+    'font-size': (
+      responsive: true,
+      property: font-size,
+      class: font,
+      values: $fontSizes,
+    ),
+    'font-weight': (
+      responsive: true,
+      property: font-weight,
+      class: fw,
+      values: $fontWeights,
+    ),
+    'padding-x': (
+      responsive: true,
+      property: padding-right padding-left,
+      class: px,
+      values: $spacers,
+    ),
+    'padding': (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: $spacers,
+    ),
+    'margin-x': (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: $spacers,
+    ),
+    'padding-y': (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values: $spacers,
+    ),
+    'margin-y': (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values: $spacers,
+    ),
+    'padding-top': (
+      responsive: true,
+      property: padding-top,
+      class: pt,
+      values: $spacers,
+    ),
+    'margin-top': (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: $spacers,
+    ),
+    'padding-end': (
+      responsive: true,
+      property: padding-right,
+      class: pe,
+      values: $spacers,
+    ),
+    'margin-end': (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values: $spacers,
+    ),
+    'margin-start': (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values: $spacers,
+    ),
+    'padding-bottom': (
+      responsive: true,
+      property: padding-bottom,
+      class: pb,
+      values: $spacers,
+    ),
+    'margin-bottom': (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values: $spacers,
+    ),
+    'padding-start': (
+      responsive: true,
+      property: padding-left,
+      class: ps,
+      values: $spacers,
+    ),
+    'text-align': (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: (
+        start: left,
+        end: right,
+        center: center,
+      ),
+    ),
+    'text-transform': (
+      responsive: true,
+      property: text-transform,
+      class: text,
+      values: (
+        capitalize: capitalize,
+        uppercase: uppercase,
+      ),
+    ),
+  ),
+  $utilities
+);
+
+@mixin generate-utility($utility) {
+  // @error 'minimum width:#{$utility}';
+
+  $values: map-get($utility, values);
+
+  // @error 'minimum width :#{$values}';
+  // @error 'minimum width :#{type-of($values)}';
+  // @error 'minimum width : #{type-of(nth($values, 1))}';
+
+  // If the values are a list or string, convert it into a map
+  @if type-of($values) == 'string' or type-of(nth($values, 1)) != 'list' {
+    $values: zip($values, $values);
+  }
+
+  // @error 'minimum width : #{$values}';
+
+  @each $key, $value in $values {
+    // @error 'key : #{$key}';
+    // @error 'value: #{$value}';
+
+    $properties: map-get($utility, property);
+
+    // @error 'value: #{$properties}';
+    // @error 'value: #{type-of($properties)}';
+    // Multiple properties are possible, for example with vertical or horizontal margins or paddings
+    @if type-of($properties) == 'string' {
+      $properties: append((), $properties);
+    }
+
+    // @error 'value: #{$properties}';
+
+    // @error 'class: #{map-has-key($utility, class)}';
+    // @error 'class: #{map-get($utility, class)}';
+    // @error 'class: #{nth($properties, 1)}';
+    // Use custom class if present
+    $property-class: if(
+      map-has-key($utility, class),
+      map-get($utility, class),
+      nth($properties, 1)
+    );
+    // @error 'class: #{$property-class}';
+
+    $property-class: if($property-class == null, '', $property-class);
+    // @error 'class: #{$property-class}';
+
+    $property-class-modifier: if(
+      $key,
+      if($property-class == '', '', '-') + $key,
+      ''
+    );
+    // @error 'class: #{$property-class-modifier}';
+
+    @if $value != null {
+      .#{$property-class + $property-class-modifier} {
+        @each $property in $properties {
+          #{$property}: $value !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+$card: ant-card;
+$card-head: #{$card}-head;
+
+.#{$card} {
+  // color: $c-text !important;
+
+  .#{$card-head}-title {
+    color: $c-text;
+  }
+
+  &-small {
+    > .#{$card-head} {
+      min-height: unset !important;
+
+      > .#{$card-head}-wrapper {
+        opacity: 1;
+        > .#{$card-head}-title {
+          padding: 4px 0 !important;
+        }
+      }
+    }
+  }
+
+  &.device-summary-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .#{$card}-body {
+      flex-grow: 1;
+    }
+  }
+}

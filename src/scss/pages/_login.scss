@@ -1,0 +1,30 @@
+/*========================================================================
+										Login page
+========================================================================*/
+$login-prefix: login;
+
+.#{$login-prefix} {
+  &-row {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
+  &-card {
+    padding: 50px 20px;
+
+    .image-holder {
+      margin-top: -16px;
+      // margin-bottom: 40px;
+      text-align: center;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .card-subtitle {
+      position: $rel;
+      margin-top: -10px;
+    }
+  }
+}

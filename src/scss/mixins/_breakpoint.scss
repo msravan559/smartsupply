@@ -1,0 +1,38 @@
+//------ SASS Useful Mixins ---------------------------------------------
+
+// by Ryan Burgess
+// https://github.com/ryanburgess/SASS-Useful-Mixins
+// MIT © Ryan Burgess
+
+// ----------------------------------------------------------------------
+
+// Media Query Breakpoints
+
+// ----------------------------------------------------------------------
+
+// example @include breakpoint(940) { width:80%; }
+// example @include breakpoint-min-max(940, 1200) { width:80%; }
+
+@mixin breakpoint($size) {
+  @media only screen and (max-width: $size + px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min($size) {
+  @media only screen and (min-width: $size + px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max($size) {
+  @media only screen and (max-width: $size + px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-max($size-min, $size-max) {
+  @media only screen and (min-width: $size-min + px) and (max-width: $size-max + px) {
+    @content;
+  }
+}

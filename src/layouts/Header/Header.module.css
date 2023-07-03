@@ -1,0 +1,15 @@
+.appHeader :global .app-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.appHeader :global .app-name h2 {
+  color: rgb(255, 255, 255);
+}
+.appHeader :global .app-name img {
+  width: 40px;
+}
+.appHeader :global .user-name {
+  height: 100%;
+  cursor: pointer;
+}/*# sourceMappingURL=Header.module.css.map */

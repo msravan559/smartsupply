@@ -1,0 +1,16 @@
+// ----------------------------------------------------------------------
+
+  // Typograpgy styles
+
+// ----------------------------------------------------------------------
+
+// example: @include text($brand-font-1, 14px, 14px, 1px);
+
+@mixin text($font-family, $font-size, $line-height, $letter-spacing) {
+
+	font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+
+}

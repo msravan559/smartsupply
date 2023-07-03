@@ -1,0 +1,16 @@
+.submit_payment {
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  background: #175491;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+}
+.add_payment_table {
+  white-space: nowrap;
+  overflow: hidden;
+}

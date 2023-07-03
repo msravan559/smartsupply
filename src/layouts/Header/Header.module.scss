@@ -1,0 +1,22 @@
+.appHeader {
+  :global {
+    .app-name {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      h2 {
+        color: rgb(255, 255, 255);
+      }
+
+      img {
+        width: 40px;
+      }
+    }
+
+    .user-name {
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}

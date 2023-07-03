@@ -1,0 +1,52 @@
+@mixin before() {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.content-has-border {
+  // border: 1px solid $c-dgray;
+  border: 1px solid #ebebeb;
+}
+
+.content-has-radius {
+  @extend .content-has-border;
+  border-radius: $b-radius;
+}
+
+.color-white {
+  color: white !important;
+}
+
+.c-text {
+  color: $c-text !important;
+}
+
+.c-brand {
+  color: $c-brand !important;
+}
+
+.br-0 {
+  border-right: 0px !important;
+}
+
+.transition {
+  transition: all 0.25s;
+}
+
+.bg-green {
+  background-color: $c-brand !important;
+}
+
+.bg-blue {
+  background-color: #4aaee4 !important;
+}
+
+@each $key, $utility in $utilities {
+  // @error 'minimum width:#{type-of($utility)}';
+  // The utility can be disabled with `false`, thus check if the utility is a map first
+  // Only proceed if responsive media queries are enabled or if it's the base media query
+  @if type-of($utility) == 'map' {
+    @include generate-utility($utility);
+  }
+}

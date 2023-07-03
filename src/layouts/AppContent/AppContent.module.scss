@@ -1,0 +1,16 @@
+.appContentWrapper {
+  position: fixed;
+  overflow: hidden;
+  // font-size: 12px !important;
+
+  // :global {
+  //   .app-content {
+  //     background: white;
+  //   }
+  // }
+}
+
+.appContent {
+  height: 100%;
+  background: rgb(214, 220, 220);
+}

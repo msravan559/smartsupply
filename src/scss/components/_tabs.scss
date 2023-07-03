@@ -1,0 +1,10 @@
+$ant-tabs: ant-tabs;
+
+.#{$ant-tabs} {
+  &.operations-tabs {
+    // :where(.css-dev-only-do-not-override-bsabqp).ant-tabs-card >.ant-tabs-nav .ant-tabs-tab
+    .#{$ant-tabs}-tab {
+      border-bottom: 0 !important;
+    }
+  }
+}
